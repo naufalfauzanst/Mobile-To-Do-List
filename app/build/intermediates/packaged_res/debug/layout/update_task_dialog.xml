@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/titleTaskTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Task"
+                android:textColor="#2C3E50"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/closeImg"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_close"
+                app:tint="#95A5A6"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewHLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ECF0F1"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edTaskTitleL"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Enter The Task Title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8F9FA"
+                android:inputType="text"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edTaskDescL"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Enter The Task Description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTaskDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8F9FA"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLines="5"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/updateTaskBtn"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#3498DB"
+            android:text="Update Task"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
